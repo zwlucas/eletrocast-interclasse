@@ -123,7 +123,7 @@ export default function Home() {
                           Inscrições
                         </h3>
                         <p className="text-gray-600 dark:text-gray-300">
-                          01/05 a 15/05
+                          Até o dia 5 as 09:40
                         </p>
                       </div>
                       <div className="z-10 flex items-center justify-center w-8 h-8 bg-blue-500 dark:bg-blue-600 rounded-full">
@@ -145,7 +145,7 @@ export default function Home() {
                           Sorteio dos Grupos
                         </h3>
                         <p className="text-gray-600 dark:text-gray-300">
-                          20/05
+                          16/04
                         </p>
                       </div>
                       <div className="z-10 flex items-center justify-center w-8 h-8 bg-blue-500 dark:bg-blue-600 rounded-full">
@@ -166,7 +166,7 @@ export default function Home() {
                           Competição
                         </h3>
                         <p className="text-gray-600 dark:text-gray-300">
-                          01/06 a 15/06
+                          22/04 a 25/04
                         </p>
                       </div>
                       <div className="z-10 flex items-center justify-center w-8 h-8 bg-blue-500 dark:bg-blue-600 rounded-full">
@@ -187,7 +187,7 @@ export default function Home() {
                           Finais e Premiação
                         </h3>
                         <p className="text-gray-600 dark:text-gray-300">
-                          20/06
+                          25/04
                         </p>
                       </div>
                       <div className="z-10 flex items-center justify-center w-8 h-8 bg-blue-500 dark:bg-blue-600 rounded-full">
@@ -221,7 +221,7 @@ export default function Home() {
                 <p className="text-gray-600 dark:text-gray-300">
                   Apenas alunos regularmente matriculados na escola podem
                   participar. Cada turma pode inscrever um time por modalidade e
-                  categoria.
+                  categoria. Será levado em consideração frequência e nota.
                 </p>
               </div>
               <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
