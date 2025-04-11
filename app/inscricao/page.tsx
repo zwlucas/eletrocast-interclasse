@@ -22,7 +22,7 @@ export default function InscricaoPage() {
   const steps = [
     "Verificação",
     "Confirmação",
-    "Modalidade e Jogadoras",
+    "Modalidade e Jogadores",
     "Concluído",
   ];
 
