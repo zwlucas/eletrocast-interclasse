@@ -17,7 +17,7 @@ VALUES
     ('23313', 'Nykolly Barbosa De Abreu', '3º', 'Eletrotécnica PI'),
     ('24015', 'Gustavo Lima Ferreira dos Santos', '2º', 'Desenvolvimento de Sistemas AMS'),
     ('25105', 'Esther Noemi Victorino de Miranda', '1º', 'Desenvolvimento de Sistemas AMS'),
-    ('23230', 'Ana Marcela Maria Inácio do Prado Goldschmidt', '1º', 'Desenvolvimento de Sistemas AMS'),
+    ('23230', 'Ana Marcela Maria Inácio do Prado Goldschmidt', '3º', 'Desenvolvimento de Sistemas AMS'),
     ('24005', 'Nícolas Sidnei Oliveira', '2º', 'Automação Industrial'),
     ('24165', 'João Lucas Perboni da Costa', '2º', 'Mecatrônica'),
     ('23258', 'Sônia Clara Carvalho', '3º', 'Automação Industrial'),
