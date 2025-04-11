@@ -123,7 +123,7 @@ export default function Home() {
                           Inscrições
                         </h3>
                         <p className="text-gray-600 dark:text-gray-300">
-                          Até o dia 5 as 09:40
+                          Até 12:30 do dia 11/04
                         </p>
                       </div>
                       <div className="z-10 flex items-center justify-center w-8 h-8 bg-blue-500 dark:bg-blue-600 rounded-full">
