@@ -10,7 +10,7 @@ export default function Home() {
         <section className="bg-gradient-to-b from-blue-500 to-blue-600 dark:from-blue-700 dark:to-blue-900 text-white py-20">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Interclasse 2024
+              Esquenta Paulo Freire 2025
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
               Participe da maior competição esportiva entre turmas da nossa
