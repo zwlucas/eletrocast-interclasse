@@ -45,6 +45,25 @@ export default function Home() {
               Modalidades Disponíveis
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm">
+                <div className="text-4xl mb-4">⚽</div>
+                <h3 className="text-xl font-semibold mb-2 dark:text-white">
+                  Futsal
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Competição de futsal entre as turmas. Equipes de 12 jogadores,
+                  com 5 em quadra.
+                </p>
+                <div className="mt-4 flex gap-2">
+                  <span className="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-xs font-medium text-pink-700 ring-1 ring-inset ring-pink-700/10 dark:bg-pink-900/30 dark:text-pink-200">
+                    Feminino
+                  </span>
+                  <span className="inline-flex items-center rounded-md bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10 dark:bg-indigo-900/30 dark:text-indigo-200">
+                    Masculino
+                  </span>
+                </div>
+              </div>
+
               <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm">
                 <div className="text-4xl mb-4">🏐</div>
                 <h3 className="text-xl font-semibold mb-2 dark:text-white">
@@ -63,6 +82,7 @@ export default function Home() {
                   </span>
                 </div>
               </div>
+
               <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm">
                 <div className="text-4xl mb-4">🤾</div>
                 <h3 className="text-xl font-semibold mb-2 dark:text-white">
@@ -71,24 +91,6 @@ export default function Home() {
                 <p className="text-gray-600 dark:text-gray-300">
                   Competição de handebol entre as turmas. Equipes de 12
                   jogadores, com 7 em quadra.
-                </p>
-                <div className="mt-4 flex gap-2">
-                  <span className="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-xs font-medium text-pink-700 ring-1 ring-inset ring-pink-700/10 dark:bg-pink-900/30 dark:text-pink-200">
-                    Feminino
-                  </span>
-                  <span className="inline-flex items-center rounded-md bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10 dark:bg-indigo-900/30 dark:text-indigo-200">
-                    Masculino
-                  </span>
-                </div>
-              </div>
-              <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm">
-                <div className="text-4xl mb-4">⚽</div>
-                <h3 className="text-xl font-semibold mb-2 dark:text-white">
-                  Futsal
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Competição de futsal entre as turmas. Equipes de 12 jogadores,
-                  com 5 em quadra.
                 </p>
                 <div className="mt-4 flex gap-2">
                   <span className="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-xs font-medium text-pink-700 ring-1 ring-inset ring-pink-700/10 dark:bg-pink-900/30 dark:text-pink-200">
