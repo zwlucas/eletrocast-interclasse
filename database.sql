@@ -1,4 +1,3 @@
--- Criar tabela de representantes autorizados
 CREATE TABLE IF NOT EXISTS representantes_autorizados (
     id SERIAL PRIMARY KEY,
     rm VARCHAR(20) NOT NULL UNIQUE,
@@ -27,9 +26,9 @@ VALUES
     ('23223', 'Kerolaine Vitória Rosa Molina', '3º', 'Automação Industrial'),
     ('24062', 'Rafael Corrêa Candido', '1º', 'Desenvolvimento de Sistemas PI'),
     ('24058', 'Leonardo Gabriel Tomaz dos Reis', '3º', 'Desenvolvimento de Sistemas PI'),
+    ('12345', 'Teste', '3º', 'Desenvolvimento de Sistemas AMS')
 ON CONFLICT (rm) DO NOTHING;
 
--- Criar tabela de inscrições do interclasse
 CREATE TABLE IF NOT EXISTS inscricoes_interclasse (
     id SERIAL PRIMARY KEY,
     rm_representante VARCHAR(20) NOT NULL,
@@ -43,7 +42,6 @@ CREATE TABLE IF NOT EXISTS inscricoes_interclasse (
     UNIQUE(rm_representante, modalidade, categoria)
 );
 
--- Criar índices para melhorar a performance das consultas
 CREATE INDEX IF NOT EXISTS idx_representantes_rm ON representantes_autorizados(rm);
 CREATE INDEX IF NOT EXISTS idx_inscricoes_rm ON inscricoes_interclasse(rm_representante);
 CREATE INDEX IF NOT EXISTS idx_inscricoes_modalidade ON inscricoes_interclasse(modalidade);
