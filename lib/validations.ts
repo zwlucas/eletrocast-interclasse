@@ -8,7 +8,7 @@ export const representativeSchema = z.object({
 
 // Step 3: Modality and players schema
 export const jogadorSchema = z.object({
-  nome: z.string().min(1, "Nome do jogador é obrigatório"),
+  nome: z.string(),
   capitao: z.boolean(),
 })
 
@@ -23,24 +23,32 @@ export const modalidadeJogadoresSchema = z.object({
     .array(jogadorSchema)
     .min(5, "É necessário informar no mínimo 5 jogadores/as")
     .max(12, "É permitido no máximo 12 jogadores/as")
-    .refine((jogadores) => jogadores.filter((j) => j.nome.trim() !== "").length >= 5, {
-      message: "É necessário informar no mínimo 5 jogadores/as",
-    })
-    .refine((jogadores) => jogadores.every((jogador) => jogador.nome.trim() !== ""), {
-      message: "Todos os nomes dos jogadores/as devem ser preenchidos",
-    })
     .refine(
       (jogadores) => {
-        const nomes = jogadores.map((jogador) => jogador.nome.trim().toLowerCase())
+        const jogadoresValidos = jogadores.filter((j) => j.nome.trim() !== "")
+        return jogadoresValidos.length >= 5
+      },
+      {
+        message: "É necessário informar no mínimo 5 jogadores/as",
+      },
+    )
+    .refine(
+      (jogadores) => {
+        const nomes = jogadores.filter((j) => j.nome.trim() !== "").map((jogador) => jogador.nome.trim().toLowerCase())
         return new Set(nomes).size === nomes.length
       },
       {
         message: "Não são permitidos nomes duplicados",
       },
     )
-    .refine((jogadores) => jogadores.filter((jogador) => jogador.capitao).length === 1, {
-      message: "É necessário selecionar exatamente um/a capitão/ã",
-    }),
+    .refine(
+      (jogadores) => {
+        return jogadores.filter((jogador) => jogador.capitao && jogador.nome.trim() !== "").length === 1
+      },
+      {
+        message: "É necessário selecionar exatamente um/a capitão/ã",
+      },
+    ),
 })
 
 export type RepresentativeFormData = z.infer<typeof representativeSchema>
