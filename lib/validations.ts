@@ -21,7 +21,11 @@ export const modalidadeJogadoresSchema = z.object({
   }),
   jogadores: z
     .array(jogadorSchema)
-    .length(12, "É necessário informar exatamente 12 jogadores/as")
+    .min(5, "É necessário informar no mínimo 5 jogadores/as")
+    .max(12, "É permitido no máximo 12 jogadores/as")
+    .refine((jogadores) => jogadores.filter((j) => j.nome.trim() !== "").length >= 5, {
+      message: "É necessário informar no mínimo 5 jogadores/as",
+    })
     .refine((jogadores) => jogadores.every((jogador) => jogador.nome.trim() !== ""), {
       message: "Todos os nomes dos jogadores/as devem ser preenchidos",
     })
