@@ -263,13 +263,7 @@ export function ModalityPlayersForm() {
                   >
                     <div className="col-span-8">
                       <Input
-                        placeholder={`Nome ${
-                          selectedCategoria === "feminino"
-                            ? "da jogadora"
-                            : selectedCategoria === "masculino"
-                            ? "do jogador"
-                            : "do/a jogador/a"
-                        } ${index + 1}`}
+                        placeholder={`Nome ${selectedCategoria === "feminino" ? "da jogadora" : selectedCategoria === "masculino" ? "do jogador" : "do/a jogador/a"} ${index + 1}${index < 5 ? " (obrigatório)" : ""}`}
                         value={form.watch(`jogadores.${index}.nome`)}
                         onChange={(e) =>
                           handleNomeChange(index, e.target.value)
