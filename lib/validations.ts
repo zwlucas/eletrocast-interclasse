@@ -25,7 +25,9 @@ export const modalidadeJogadoresSchema = z.object({
     .max(12, "É permitido no máximo 12 jogadores/as")
     .refine(
       (jogadores) => {
+        // Filtra apenas jogadores com nome preenchido
         const jogadoresValidos = jogadores.filter((j) => j.nome.trim() !== "")
+        // Verifica se há pelo menos 5 jogadores válidos
         return jogadoresValidos.length >= 5
       },
       {
@@ -34,6 +36,7 @@ export const modalidadeJogadoresSchema = z.object({
     )
     .refine(
       (jogadores) => {
+        // Verifica se não há nomes duplicados entre os jogadores com nome preenchido
         const nomes = jogadores.filter((j) => j.nome.trim() !== "").map((jogador) => jogador.nome.trim().toLowerCase())
         return new Set(nomes).size === nomes.length
       },
@@ -43,6 +46,7 @@ export const modalidadeJogadoresSchema = z.object({
     )
     .refine(
       (jogadores) => {
+        // Verifica se há exatamente um capitão entre os jogadores com nome preenchido
         return jogadores.filter((jogador) => jogador.capitao && jogador.nome.trim() !== "").length === 1
       },
       {
