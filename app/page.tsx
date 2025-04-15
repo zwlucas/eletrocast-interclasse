@@ -25,6 +25,14 @@ export default function Home() {
                   Fazer Inscrição
                 </Button>
               </Link>
+              <Link href="/chaveamento" passHref>
+                <Button
+                  size="lg"
+                  className="bg-blue-700 text-white hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700"
+                >
+                  Ver Chaveamento
+                </Button>
+              </Link>
               <Link href="/admin" passHref>
                 <Button
                   size="lg"
